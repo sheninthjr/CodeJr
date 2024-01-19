@@ -29,7 +29,7 @@ const handlerZigzagConversion = (fn: any) => {
 
 export const zigzagConversion: Problem = {
   id: 'zigzag-conversion',
-  title: '6. Zigzag Conversion',
+  title: '5. Zigzag Conversion',
   type: 'medium',
   problemStatement: `<p>
   The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
@@ -79,6 +79,6 @@ string convert(string s, int numRows);
 </p>`,
   handlerFunction: handlerZigzagConversion,
   starterCode: starterCodeZigzagConversion,
-  order: 6,
+  order: 5,
   starterFunctionName: 'function convert(',
 };
