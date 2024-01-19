@@ -1,7 +1,6 @@
 import { problems } from "@/app/utils/problems";
 import { Problem } from "@/app/utils/types/problem";
 import React from "react";
-import NavBar from "../../NavBar";
 
 type ProblemDescriptionProps = {
   problem: Problem;
@@ -12,45 +11,50 @@ const ProblemDescription = ({ pid, problem }: ProblemDescriptionProps) => {
   const problemData = problems[pid];
   const { title, type, problemStatement, examples, constraints } = problemData;
   return (
-    <div className="bg-dark-layer-1 h-screen">
-      <NavBar />
+    <div className="bg-black h-screen">
       <div className="flex h-11 w-full items-center pt-2 bg-dark-layer-2 text-white overflow-x-hidden">
-        <div
+        <a
+          href="/"
           className={
-            "bg-dark-layer-1 rounded-t-[5px] px-5 py-[10px] text-xs cursor-pointer"
+            "bg-black rounded-t-[5px] px-5 py-[10px] text-lg cursor-pointer"
           }
         >
-          Description
-        </div>
+          Code Jr
+        </a>
       </div>
       <div className="flex px-0 py-4 h-[calc(100vh-94px)] overflow-y-auto">
         <div className="px-5">
           <div className="w-full">
             <div className="flex space-x-4">
               <div className="flex-1 mr-2 text-lg text-white font-medium">
+                <div className="font-bold text-xl">Description</div>
                 {title}
               </div>
             </div>
             <div className="flex items-center mt-3">
               <div
-                className={`text-olive bg-olive inline-block rounded-[21px] bg-opacity-[.15] px-2.5 py-1 text-xs font-medium capitalize `}
+                className={`inline-block rounded-[21px] px-2.5 py-1 text-xs font-medium capitalize ${
+                  type === "easy"
+                    ? "text-olive bg-olive bg-opacity-[.15]"
+                    : type === "medium"
+                    ? "text-yellow-400 bg-yellow-400 bg-opacity-[.15]"
+                    : type === "hard"
+                    ? "text-red-500 bg-red-500 bg-opacity-[.15]"
+                    : ""
+                }`}
               >
                 {type}
               </div>
             </div>
-
-            <div className="text-white text-sm">
-              <div
-                className="text-white text-sm"
-                dangerouslySetInnerHTML={{ __html: problemStatement }}
-              />
-            </div>
-
+            <div
+              className="text-white text-lg"
+              dangerouslySetInnerHTML={{ __html: problemStatement }}
+            />
             <div className="mt-4">
               {examples.map((example) => (
                 <div key={example.id}>
                   <p className="font-medium text-white ">
-                    Example {example.id}:{" "}
+                    Example {example.id + 1}:{" "}
                   </p>
                   <div className="example-card">
                     <pre>

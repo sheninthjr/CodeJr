@@ -23,7 +23,7 @@ const config: Config = {
 				"brand-orange-s": "rgb(193, 122, 15)",
 				"dark-yellow": "rgb(255 192 30)",
 				"dark-pink": "rgb(255 55 95)",
-				olive: "rgb(0, 184, 163)",
+				"olive": "rgb(0, 184, 163)",
 				"dark-green-s": "rgb(44 187 93)",
 				"dark-blue-s": "rgb(10 132 255)",
 			},

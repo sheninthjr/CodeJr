@@ -4,7 +4,6 @@ import PreferenceNav from "./PreferenceNav/PreferenceNav";
 import CodeMirror from "@uiw/react-codemirror";
 import { vscodeDark } from "@uiw/codemirror-theme-vscode";
 import { javascript } from "@codemirror/lang-javascript";
-import EditorFooter from "./EditorFooter";
 import { Problem } from "@/app/utils/types/problem";
 import { problems } from "@/app/utils/problems";
 import { toast } from "react-toastify";
@@ -53,8 +52,8 @@ const Playground: React.FC<PlaygroundProps> = ({
     setUserCode(value);
   };
   return (
-    <div className="flex flex-col bg-dark-layer-1 relative overflow-x-hidden h-screen">
-      <PreferenceNav />
+    <div className="flex flex-col bg-black relative overflow-x-hidden h-screen">
+      <PreferenceNav handleSubmit={handleSubmit}/>
       <div className="w-full overflow-auto">
         <CodeMirror
           value={userCode}
@@ -64,7 +63,6 @@ const Playground: React.FC<PlaygroundProps> = ({
           onChange={onChange}
         />
       </div>
-      <EditorFooter handleSubmit={handleSubmit} />
     </div>
   );
 };

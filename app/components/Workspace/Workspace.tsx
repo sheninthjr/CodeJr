@@ -6,11 +6,6 @@ import Playground from './Playground/Playground'
 import { problems } from '@/app/utils/problems'
 import Confetti from 'react-confetti'
 import { ToastContainer } from 'react-toastify'
-import { Problem } from '@/app/utils/types/problem'
-
-type WorkspaceProps = {
-	problem: Problem;
-};
 
 const Workspace = ({pid,problem}:any) => {
   const [success, setSuccess] = useState(false);

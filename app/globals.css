@@ -42,7 +42,7 @@ body {
 /* CODE EDITOR*/
 .cm-scroller,
 .cm-gutters {
-	background-color: #282828 !important;
+	background-color: black !important;
 }
 .cm-focused {
 	outline: none !important;
@@ -88,7 +88,7 @@ code {
 }
 
 .example-card pre {
-	background-color: hsla(0, 0%, 100%, 0.1);
+	background-color: rgb(40,40,40);
 	border-radius: 0.5rem;
 	color: rgba(239, 241, 246, 0.75);
 	font-size: 0.98rem;
