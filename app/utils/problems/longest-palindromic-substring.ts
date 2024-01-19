@@ -53,6 +53,6 @@ export const longestPalindromicSubstring: Problem = {
 </p>`,
   handlerFunction: handlerLongestPalindromicSubstring,
   starterCode: starterCodeLongestPalindromicSubstring,
-  order: 5,
+  order: 4,
   starterFunctionName: 'function longestPalindrome(',
 };

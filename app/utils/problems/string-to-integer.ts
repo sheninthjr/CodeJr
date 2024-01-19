@@ -82,6 +82,6 @@ export const atoi: Problem = {
 </p>`,
   handlerFunction: handlerAtoi,
   starterCode: starterCodeAtoi,
-  order: 8,
+  order: 7,
   starterFunctionName: 'function myAtoi(',
 };

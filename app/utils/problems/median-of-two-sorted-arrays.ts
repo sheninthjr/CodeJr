@@ -70,6 +70,6 @@ export const medianOfTwoSortedArrays: Problem = {
 </p>`,
   handlerFunction: handlerMedianOfTwoSortedArrays,
   starterCode: starterCodeMedianOfTwoSortedArrays,
-  order: 4,
+  order: 3,
   starterFunctionName: "function findMedianSortedArrays(",
 };
