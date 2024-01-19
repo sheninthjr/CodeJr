@@ -20,12 +20,16 @@ const Playground: React.FC<PlaygroundProps> = ({
   pid,
   setSuccess,
 }) => {
-  let [userCode, setUserCode] = useState<string>(problem.starterCode);
+  const localStorageKey = `sheninthjr`;
+  const storedUserCode = localStorage.getItem(localStorageKey);
+  const [userCode, setUserCode] = useState<string>(
+    storedUserCode || problem.starterCode
+  );
   const pId = pid;
-  
+
   const handleSubmit = async () => {
     try {
-      console.log(userCode)
+      localStorage.setItem(localStorageKey, userCode);
       const cb = new Function(`return ${userCode}`)();
       const handler = problems[pId].handlerFunction;
       if (typeof handler === "function") {
