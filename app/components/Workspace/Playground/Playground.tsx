@@ -22,8 +22,10 @@ const Playground: React.FC<PlaygroundProps> = ({
 }) => {
   let [userCode, setUserCode] = useState<string>(problem.starterCode);
   const pId = pid;
+  
   const handleSubmit = async () => {
     try {
+      console.log(userCode)
       const cb = new Function(`return ${userCode}`)();
       const handler = problems[pId].handlerFunction;
       if (typeof handler === "function") {
@@ -40,12 +42,24 @@ const Playground: React.FC<PlaygroundProps> = ({
           }, 4000);
         }
       }
-    } catch (error) {
-      toast.error("The Code enter Below has some mistake", {
-        position: "top-center",
-        autoClose: 3000,
-        theme: "dark",
-      });
+    } catch (error: any) {
+      if (
+        error.message.startsWith(
+          "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:"
+        )
+      ) {
+        toast.error("Oops! One or more test cases failed", {
+          position: "top-center",
+          autoClose: 3000,
+          theme: "dark",
+        });
+      } else {
+        toast.error(error.message, {
+          position: "top-center",
+          autoClose: 3000,
+          theme: "dark",
+        });
+      }
     }
   };
   const onChange = (value: string) => {
@@ -53,7 +67,7 @@ const Playground: React.FC<PlaygroundProps> = ({
   };
   return (
     <div className="flex flex-col bg-black relative overflow-x-hidden h-screen">
-      <PreferenceNav handleSubmit={handleSubmit}/>
+      <PreferenceNav handleSubmit={handleSubmit} />
       <div className="w-full overflow-auto">
         <CodeMirror
           value={userCode}

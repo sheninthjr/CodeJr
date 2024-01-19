@@ -23,7 +23,7 @@ const ProblemTab = () => {
             </button>
           </div>
           <div className="flex justify-between border p-2 border-slate-700">
-            <a href="/problems/reverse-linked-list">2.Reverse Linked List</a>
+            <a href="/problems/add-two-numbers">2.Add Two Numbers</a>
             <button
               className="bg-green-500 p-1 rounded-lg"
               onClick={() => handleSolve("/problems/add-two-numbers")}
@@ -67,7 +67,7 @@ const ProblemTab = () => {
             </button>
           </div>
           <div className="flex justify-between border p-2 border-slate-700">
-            <a href="/problems/reverse-integer">6.Zigzag Conversion</a>
+            <a href="/problems/reverse-integer">6.Reverse Integer</a>
             <button
               className="bg-green-500 p-1 rounded-lg"
               onClick={() => handleSolve("/problems/reverse-integer")}

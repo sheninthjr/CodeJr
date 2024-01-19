@@ -37,9 +37,9 @@ const ProblemDescription = ({ pid, problem }: ProblemDescriptionProps) => {
                   type === "easy"
                     ? "text-olive bg-olive bg-opacity-[.15]"
                     : type === "medium"
-                    ? "text-yellow-400 bg-yellow-400 bg-opacity-[.15]"
+                    ? "text-brand-orange bg-brand-orange bg-opacity-[.15]"
                     : type === "hard"
-                    ? "text-red-500 bg-red-500 bg-opacity-[.15]"
+                    ? "text-dark-pink bg-dark-pink bg-opacity-[.15]"
                     : ""
                 }`}
               >
@@ -47,14 +47,14 @@ const ProblemDescription = ({ pid, problem }: ProblemDescriptionProps) => {
               </div>
             </div>
             <div
-              className="text-white text-lg"
+              className="text-white text-lg mt-2"
               dangerouslySetInnerHTML={{ __html: problemStatement }}
             />
             <div className="mt-4">
               {examples.map((example) => (
                 <div key={example.id}>
                   <p className="font-medium text-white ">
-                    Example {example.id + 1}:{" "}
+                    Example {example.id}:{" "}
                   </p>
                   <div className="example-card">
                     <pre>
@@ -74,7 +74,7 @@ const ProblemDescription = ({ pid, problem }: ProblemDescriptionProps) => {
             <div className="my-5">
               <div className="text-white text-sm font-medium">Constraints:</div>
               <ul
-                className="text-white ml-5 list-disc"
+                className="text-white ml-5 list-disc flex flex-col space-y-4 mt-4"
                 dangerouslySetInnerHTML={{ __html: constraints }}
               />
             </div>
