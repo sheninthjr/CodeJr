@@ -11,7 +11,7 @@ const ProblemTab = () => {
   return (
     <div className="">
       <NavBar />
-      <div className="flex flex-col justify-center items-center h-screen bg-dark-layer-1 text-white p-4">
+      <div className="flex flex-col justify-center items-center h-screen bg-black text-white p-4">
         <div className="w-1/2">
           <div className="flex justify-between border p-2 border-slate-700">
             <a href="/problems/two-sum">1.Two Sum</a>
