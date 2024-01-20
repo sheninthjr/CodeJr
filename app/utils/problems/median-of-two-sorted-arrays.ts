@@ -50,24 +50,24 @@ export const medianOfTwoSortedArrays: Problem = {
       explanation: "Merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.",
     },
   ],
-  constraints: `<p>
+  constraints: `<li>
   <code>nums1.length == m</code>
-</p>
-<p>
+</li>
+<li>
   <code>nums2.length == n</code>
-</p>
-<p>
+</li>
+<li>
   <code>0 <= m <= 1000</code>
-</p>
-<p>
+</li>
+<li>
   <code>0 <= n <= 1000</code>
-</p>
-<p>
+</li>
+<li>
   <code>1 <= m + n <= 2000</code>
-</p>
-<p>
+</li>
+<li>
   <code>-10^6 <= nums1[i], nums2[i] <= 10^6</code>
-</p>`,
+</li>`,
   handlerFunction: handlerMedianOfTwoSortedArrays,
   starterCode: starterCodeMedianOfTwoSortedArrays,
   order: 3,

@@ -57,9 +57,9 @@ export const reverseInteger: Problem = {
       explanation: 'Reversing the digits of 120 gives 21.',
     },
   ],
-  constraints: `<p>
+  constraints: `<li>
   <code>-2<sup>31</sup> <= x <= 2<sup>31</sup> - 1</code>
-</p>`,
+</li>`,
   handlerFunction: handlerReverseInteger,
   starterCode: starterCodeReverseInteger,
   order: 6,

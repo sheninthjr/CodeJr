@@ -45,12 +45,12 @@ export const longestPalindromicSubstring: Problem = {
       outputText: '"bb"',
     },
   ],
-  constraints: `<p>
+  constraints: `<li>
   <code>1 <= s.length <= 1000</code>
-</p>
-<p>
+</li>
+<li>
   <code>s</code> consists of only digits and English letters.
-</p>`,
+</li>`,
   handlerFunction: handlerLongestPalindromicSubstring,
   starterCode: starterCodeLongestPalindromicSubstring,
   order: 4,

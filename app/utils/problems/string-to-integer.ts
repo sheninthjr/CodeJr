@@ -48,11 +48,6 @@ export const atoi: Problem = {
 <ul>
   <li>Only the space character ' ' is considered a whitespace character.</li>
   <li>Do not ignore any characters other than the leading whitespace or the rest of the string after the digits.</li>
-</ul>
-<p><strong>Constraints:</strong></p>
-<ul>
-  <li><code>0 <= s.length <= 200</code></li>
-  <li><code>s</code> consists of English letters (lower-case and upper-case), digits (0-9), ' ', '+', '-', and '.'.</li>
 </ul>`,
   examples: [
     {
@@ -74,12 +69,12 @@ export const atoi: Problem = {
       explanation: 'The parsed integer is 4193. Since 4193 is in the range [-2^31, 2^31 - 1], the final result is 4193.',
     },
   ],
-  constraints: `<p>
+  constraints: `<li>
   <code>0 <= s.length <= 200</code>
-</p>
-<p>
+</li>
+<li>
   <code>s</code> consists of English letters (lower-case and upper-case), digits (0-9), ' ', '+', '-', and '.'.
-</p>`,
+</li>`,
   handlerFunction: handlerAtoi,
   starterCode: starterCodeAtoi,
   order: 7,

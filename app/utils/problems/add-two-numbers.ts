@@ -126,9 +126,9 @@ export const addTwoNumbersProblem: Problem = {
       explanation: "9999999 + 9999 = 10009998",
     },
   ],
-  constraints: `<p>The number of nodes in each linked list is in the range [1, 100].</p>
-  <p><code>0 <= Node.val <= 9</code></p>
-  <p>It is guaranteed that the list represents a number that does not have leading zeros.</p>`,
+  constraints: `<li>The number of nodes in each linked list is in the range [1, 100].</li>
+  <li><code>0 <= Node.val <= 9</code></li>
+  <li>It is guaranteed that the list represents a number that does not have leading zeros.</li>`,
   handlerFunction: handlerAddTwoNumbers,
   starterCode: starterTwo,
   order: 2,

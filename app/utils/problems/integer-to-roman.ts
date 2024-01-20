@@ -118,9 +118,9 @@ export const integerToRoman: Problem = {
       explanation: 'M = 1000, CM = 900, XC = 90, and IV = 4.',
     },
   ],
-  constraints: `<p>
+  constraints: `<li>
   <code>1 <= num <= 3999</code>
-</p>`,
+</li>`,
   handlerFunction: handlerIntegerToRoman,
   starterCode: starterCodeIntegerToRoman,
   order: 8,
