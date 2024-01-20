@@ -10,11 +10,11 @@ cd CodeJr
 ### Install the Dependencies
 
 ```sh
-cd npm install
+npm install
 ```
 
 ### Run the command for Local Development
 
 ```sh
-cd npm run dev
+npm run dev
 ```
