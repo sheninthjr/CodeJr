@@ -20,7 +20,7 @@ const Playground: React.FC<PlaygroundProps> = ({
   pid,
   setSuccess,
 }) => {
-  const localStorageKey = `sheninthjr`;
+  const localStorageKey = `userCode_${pid}`;
   const storedUserCode = localStorage.getItem(localStorageKey);
   const [userCode, setUserCode] = useState<string>(
     storedUserCode || problem.starterCode
